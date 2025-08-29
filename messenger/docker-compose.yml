@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: chat
+      POSTGRES_PASSWORD: chat
+      POSTGRES_DB: chat
+    ports: ["5432:5432"]
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+
+  api:
+    build: ./api
+    environment:
+      DATABASE_URL: postgresql://chat:chat@db:5432/chat
+      PORT: "8080"
+      NODE_ENV: production
+    ports: ["8080:8080"]
+    depends_on:
+      - db
+
+volumes:
+  dbdata:
