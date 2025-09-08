@@ -1,4 +1,6 @@
 // Run: node storm.js --help
+// PLEASE NOTE: This script is shameless AI slop. This is badly designed systems after all.
+
 const API = process.env.API || "http://localhost:8080";
 
 function parseArgs(argv) {

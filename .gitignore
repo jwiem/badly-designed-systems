@@ -1,0 +1,60 @@
+# gitignore
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# macOS
+.DS_Store
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+env/
+venv/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.pytest_cache/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+.tox/
+.nox/
+.pdm.toml
+.pdm.lock
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Misc
+dist/
+build/
+tmp/
+temp/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+
+
